@@ -1,0 +1,26 @@
+---
+title: "example"
+author: "José Alquicira Hernández"
+date: "March 1, 2016"
+output: html_document
+---
+
+```{r}
+library(plotly)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
+
+devtools::session_info()
+```
+
+```{r}
+devtools::install_github("ropensci/plotly")
+
+library(plotly)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
+
+devtools::session_info()
+```
